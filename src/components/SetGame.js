@@ -1,28 +1,47 @@
 import React from 'react'
 import { useState } from 'react';
 
-const games = ["Overwatch", "Valorant", "Roblox"];
+const games = ["Overwatch", "Valorant", "Sims"];
 
+let gameAnswer = "";
+let userChoice = "";
 function SetGame() {
-    randomNumbers()
-
-}
-
-function randomNumbers() {
     let randomNumber = Math.floor(Math.random() * 3)
-    console.log(randomNumber)
     GamePicker(randomNumber)
+    return(
+        <div>
+            testy
+        </div>
+    )
 }
 
 function GamePicker(randomNumber) {
 
-    // const [game, setGame] = useState(games[randomNumber]);
-    const [game, setGame] = useState("");
-    setGame("overwatch")
-    
-    console.log(game)
-    return {game, setGame}
+    const [game, setGames] = useState(games[randomNumber]);
+    const [userAnswer, setUserAnswer] = useState("");
+
+    gameAnswer = game;
+    console.log("This is da games" + game)
+    return game
 }
 
-// export default Setgame
-export {SetGame, GamePicker}
+
+function fileSet(answer) {
+    userChoice = answer;
+    if (userChoice == gameAnswer) {
+        console.log("OMG IT ACTUALLY WORKS")
+    }
+}
+
+// function ImageHolder(value) {
+//     let userInput = value;
+//     console.log("value from imageholder" + value)
+
+//     return (
+//       <div>
+//         boo
+//       </div>
+//     )
+// }
+
+export {SetGame, GamePicker, fileSet}

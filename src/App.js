@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import React from 'react'
 
+import { answerChecker, ImageHolder, fileSet } from "./components/SetGame";
+
 const App = () => {
   const [userAnswer, setUserAnswer] = useState('');
 
@@ -9,7 +11,7 @@ const App = () => {
     event.preventDefault();
 
     console.log('answer: ', userAnswer);
-
+    fileSet(userAnswer)
     setUserAnswer('');
   };
 
@@ -32,12 +34,4 @@ const App = () => {
 
 export default App
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>hello</h1>
-//     </div>
-//   );
-// }
 
-// export default App;

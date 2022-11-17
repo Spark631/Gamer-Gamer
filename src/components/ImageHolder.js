@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 import questionImage from '/The True Gamer Test/gamer-test/src/images/question.png'
 
-// import { GamePicker } from "./SetGame"
+import { GamePicker } from "./SetGame"
 
-function Imageholder() {
+function ImageHolder() {
     // const [game, setGame] = GamePicker();
     // console.log(game);
     return (
@@ -14,7 +14,7 @@ function Imageholder() {
     )
 }
 
-export default Imageholder
+// export default Imageholder
 
 
 // const ImageHolder = () => {

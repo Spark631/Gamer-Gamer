@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import ImageHolder from './components/ImageHolder';
-import { SetGame, GamePicker } from './components/SetGame';
+// import ImageHolder from './components/ImageHolder';
+import {randomNumbers, SetGame } from './components/SetGame';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <SetGame />
-    <ImageHolder />
+    {/* <randomNumbers /> */}
+    {/* <ImageHolder /> */}
     <App />
     {/* <GamePicker /> */}
   </React.StrictMode>
